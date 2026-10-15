@@ -34,18 +34,6 @@ Baixe ou obtenha uma versão do Nebula pelo canal em que o projeto é distribuí
 
 Se você recebeu o Nebula em um arquivo compactado com o código-fonte, extraia os arquivos antes de começar. O projeto inclui exemplos de programas e os arquivos necessários para executar a linguagem.
 
-### 2. Confira se está funcionando
-
-Abra o **Prompt de Comando** ou o **PowerShell** e tente executar:
-
-```bat
-nebula --verificar examples\ola.neb
-```
-
-Esse comando verifica o arquivo de exemplo sem executá-lo. Ele pressupõe que o Nebula esteja instalado e disponível no `PATH` do terminal e que você esteja na pasta do projeto — ou que informe o caminho correto do arquivo.
-
-Se o Windows disser que `nebula` não é reconhecido, o executável ou script de inicialização pode não estar no `PATH`. Tente abrir um novo terminal depois da instalação. Se o problema continuar, confira a pasta de instalação ou use o iniciador incluído na sua versão.
-
 ## Seu primeiro programa
 
 Crie um arquivo chamado `ola.neb` e escreva:
@@ -208,7 +196,7 @@ declarar nomes como []
 nomes.colocar("Ana")
 nomes.colocar("Leo")
 
-para cada nome em nomes.__valores faça
+para cada nome em nomes faça
     falar(nome)
 fim
 ```
@@ -296,12 +284,6 @@ Um bom fluxo de trabalho para iniciantes é:
 5. Execute `nebula meu_programa.neb` para testar o programa.
 
 Um programa pode passar pela verificação de sintaxe e ainda se comportar de maneira diferente da esperada. A verificação não garante que a lógica do programa esteja correta.
-
-## Suporte em editores
-
-O projeto inclui uma extensão para VS Code na pasta `vscode-nebula`. Ela oferece recursos específicos para editar Nebula. Consulte o README dessa pasta para ver como instalar a extensão e quais recursos estão disponíveis na sua versão.
-
-O projeto também inclui um servidor de linguagem (LSP), que pode oferecer recursos de editor, como diagnósticos e navegação pelo código. Esses recursos dependem do editor e de como a extensão está configurada para utilizar as ferramentas do Nebula.
 
 ## Erros comuns de iniciantes
 
