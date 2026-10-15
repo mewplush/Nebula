@@ -1,0 +1,22 @@
+# Anotações de tipo (checadas em tempo de execução)
+declarar idade: número = 30
+declarar nome: string = "Ana"
+declarar notas: lista[número] = [7, 8.5, 10]
+declarar apelido: string ou nulo = nulo
+
+função media usando (valores: lista[número]) -> número
+    declarar total = 0
+    para cada v em valores faça
+        total += v
+    fim
+    retornar total / len(valores)
+fim
+
+falar(media(notas))
+
+classe Animal
+fim
+classe Gato extende Animal
+fim
+função adotar usando (a: Animal) -> string => "adotado!"
+falar(adotar(Gato()))

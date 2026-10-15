@@ -1,0 +1,18 @@
+# Sobrecarga de operadores: métodos somar / igual_a (veja README)
+classe Vetor
+  função principal usando (esse, x, y)
+    esse.x = x
+    esse.y = y
+  fim
+  função somar usando (esse, outro)
+    retornar Vetor(esse.x + outro.x, esse.y + outro.y)
+  fim
+  função igual_a usando (esse, outro)
+    retornar esse.x igual outro.x e esse.y igual outro.y
+  fim
+fim
+declarar a = Vetor(1, 2)
+declarar b = Vetor(3, 4)
+declarar c = a + b
+falar(c.x)
+falar(a == Vetor(1, 2))

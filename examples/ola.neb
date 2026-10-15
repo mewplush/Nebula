@@ -1,0 +1,6 @@
+# Exemplo básico
+declarar nome = "mundo"
+falar("Olá, ${nome}!")
+importar fatorial de matematica
+falar("5! = ${fatorial(5)}")
+falar(soma_lista(intervalo(1, 6)))

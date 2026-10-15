@@ -1,0 +1,17 @@
+#!/bin/sh
+# Launcher da Nebula para Linux/macOS. Coloque (ou faça link simbólico) em uma pasta do PATH.
+SOURCE="$0"
+while [ -h "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  case "$SOURCE" in /*) ;; *) SOURCE="$DIR/$SOURCE" ;; esac
+done
+NEB_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+ENTRY="$NEB_DIR/src/shell.py"
+[ -f "$ENTRY" ] || ENTRY="$NEB_DIR/shell.py"
+export PYTHONUTF8=1
+for PY in python3 python; do
+  if command -v "$PY" >/dev/null 2>&1; then exec "$PY" "$ENTRY" "$@"; fi
+done
+echo "[Nebula] Python 3 não encontrado." >&2
+exit 127

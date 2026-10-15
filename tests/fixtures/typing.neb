@@ -1,0 +1,105 @@
+classe Mesa
+    função principal usando (esse)
+        esse.__valores = []
+    fim
+
+    função add usando (esse, val)
+        se esse.__valores.procurar(val) > 0 então retornar 
+
+        esse.__valores.colocar(val)
+    fim
+
+    função texto usando (esse)
+        retornar str(esse.__valores)
+    fim 
+
+    função igual_a usando (esse, outro)
+        retornar esse.__valores == outro.__valores 
+    fim 
+
+    função somar usando (esse, outro)
+        se tipo(outro) == tipo(esse) então
+            para cada x em outro.__valores faça 
+                esse.add(x)
+            fim 
+        senão 
+            esse.add(outro)
+        fim
+    fim 
+fim 
+
+
+classe NúmeroOpcional
+    função principal usando (esse, x = nulo)
+        conferir tipo(x) == "número" ou tipo(x) == "nulo" usando "Erro de Valor" detalhes "Esperava-se número ou nulo"
+        esse.__val = x
+    fim
+
+    função existe usando (esse)
+        retornar tipo(esse.__val) == "número"
+    fim
+
+    função somar usando (esse, outro)
+        se não esse.existe() então
+            se tipo(esse) == tipo(outro) então
+                se outro.existe() então
+                    retornar outro.__val
+                senão
+                    retornar 0
+                fim
+            senão
+                retornar outro
+            fim
+        fim
+
+        se tipo(esse) == tipo(outro) então
+            se não outro.existe() então
+                retornar esse.__val
+            senão
+                retornar esse.__val + outro.__val
+            fim
+        senão
+            retornar esse.__val + outro
+        fim
+    fim
+
+    função multiplicar usando (esse, outro)
+        se não esse.existe() então
+            se tipo(esse) == tipo(outro) então
+                se outro.existe() então
+                    retornar outro.__val
+                senão
+                    retornar 0
+                fim
+            senão
+                retornar outro
+            fim
+        fim
+
+        se tipo(esse) == tipo(outro) então
+            se não outro.existe() então
+                retornar esse.__val
+            senão
+                retornar esse.__val * outro.__val
+            fim
+        senão
+            retornar esse.__val * outro
+        fim
+    fim
+
+    função dividir usando (esse, outro)
+        se não esse.existe() então
+            retornar 0
+        fim
+
+        se tipo(esse) == tipo(outro) então
+            se não outro.existe() então
+                retornar esse.__val
+            senão
+                retornar esse.__val / outro.__val
+            fim
+        senão
+            retornar esse.__val / outro
+        fim
+    fim
+fim

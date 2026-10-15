@@ -1,0 +1,27 @@
+# Prelúdio da Nebula: tudo aqui (exceto o que for "privada") fica disponível
+# globalmente em qualquer programa, escrito na própria linguagem.
+
+função máximo usando (a, b) => se a > b então a senão b
+função mínimo usando (a, b) => se a < b então a senão b
+função absoluto usando (x) => se x < 0 então -x senão x
+função par usando (n) => n % 2 igual 0
+função ímpar usando (n) => não par(n)
+função limitar usando (x, menor, maior) => mínimo(máximo(x, menor), maior)
+
+função soma_lista usando (itens)
+  declarar total = 0
+  para cada item em itens faça
+    total += item
+  fim
+  retornar total
+fim
+
+função intervalo usando (inicio, final, passo = 1)
+  declarar resultado = []
+  declarar atual = inicio
+  enquanto atual < final faça
+    resultado += atual
+    atual += passo
+  fim
+  retornar resultado
+fim

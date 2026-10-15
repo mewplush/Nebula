@@ -1,0 +1,40 @@
+# Módulo de matemática escrito em Nebula.
+# Uso:  importar PI, fatorial de matematica     ou     importar matematica
+
+declarar constante PI = 3.14159265358979
+declarar constante E = 2.71828182845905
+
+função fatorial usando (n)
+  se n < 2 então retornar 1
+  retornar n * fatorial(n - 1)
+fim
+
+função potencia usando (base, expoente) => base ^ expoente
+
+função mdc usando (a, b)
+  enquanto b != 0 faça
+    declarar resto = a % b
+    a = b
+    b = resto
+  fim
+  retornar a
+fim
+
+função mmc usando (a, b) => (a * b) / mdc(a, b)
+
+função fibonacci usando (n)
+  declarar a = 0
+  declarar b = 1
+  declarar i = 0
+  enquanto i < n faça
+    declarar proximo = a + b
+    a = b
+    b = proximo
+    i += 1
+  fim
+  retornar a
+fim
+
+função área_círculo usando (raio) => PI * raio * raio
+
+função privada _auxiliar usando (x) => x

@@ -1,0 +1,28 @@
+# Herança: extende, super e texto()
+classe Animal
+    função principal usando (esse, nome)
+        esse.nome = nome
+    fim
+    função som usando (esse)
+        retornar "..."
+    fim
+    função texto usando (esse)
+        retornar "${esse.nome} faz ${esse.som()}"
+    fim
+fim
+
+classe Cachorro extende Animal
+    função som usando (esse)
+        retornar super.som() + "au"
+    fim
+fim
+
+classe Filhote extende Cachorro
+    função som usando (esse)
+        retornar super.som() + "!"
+    fim
+fim
+
+falar(Animal("Generico"))
+falar(Cachorro("Rex"))
+falar(Filhote("Bolinha"))

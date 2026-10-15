@@ -1,0 +1,80 @@
+importar typing
+importar listas
+importar fatorial, naoexiste de matematica
+importar modulo_fantasma
+
+declarar constante PI = 3
+PI = 4
+
+declarar contador = 1
+falar(contadro)
+
+função soma usando (a: número, b: número = 1) -> número
+    declarar inutil = 5
+    retornar a + b
+fim
+
+soma()
+soma(1, 2, 3)
+soma("x", 2)
+
+função errada usando (x) -> número => "texto"
+
+função semretorno usando (x) -> número
+    falar(x)
+fim
+
+função depois usando ()
+    retornar 1
+    falar("nunca")
+fim
+
+declarar n: número = "oi"
+declarar z: Banana = 1
+declarar lst: lista[número] = ["a"]
+declarar m: typing.Mesa = 5
+declarar ok: typing.Mesa = typing.Mesa()
+declarar q: typing.Nada = 1
+
+classe Animal
+    função principal usando (esse, nome)
+        esse.nome = nome
+    fim
+    função falar_nome usando ()
+        falar("x")
+    fim
+    função mostrar usando (esse)
+        falar(esse.nome)
+        falar(esse.idade)
+    fim
+fim
+
+classe Gato extende Animal
+    função miar usando (esse)
+        retornar super.nada()
+    fim
+fim
+classe Orfao extende Inexistente
+fim
+classe Solto
+    função f usando (esse)
+        retornar super.f()
+    fim
+fim
+
+Animal()
+Animal("a", "b")
+declarar a: Animal = Gato("g")
+a.voar()
+declarar g: Gato = Animal("x")
+
+declarar total = 0
+função mexer usando ()
+    total = 5
+    falar(total)
+fim
+
+retornar 3
+parar
+typing.naoexiste
+falar(super)
